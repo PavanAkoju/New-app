@@ -27,12 +27,6 @@ export default function Tabs() {
       setActiveTabIndex(activeTabIndex - 1);
     }
   }
-
-  ///START///
-  // const [selectedAge, setSelectedAge] = useState('');
-  // const [selectedPlan, setSelectedPlan] = useState(0);
-  // const [payingTerm, setPayingTerm] = useState(0);
-  // const [premiumRate, setPremiumRate] = useState(0);
   const [selectedAge, setSelectedAge] = useState('');
   const [selectedPlan, setSelectedPlan] = useState(0);
   const [payingTerm, setPayingTerm] = useState(0);
@@ -78,31 +72,6 @@ export default function Tabs() {
     const rate = data[selectedAge][selectedPlan][payingTerm];
     setpremiumRate(rate);
   }
-
-  
-
-  // const [value, setValue] = useState('');
-  // const halfYearlypremiumRate = (premiumRate / 2).toFixed(2);
-  // const quarterlypremiumRate = (premiumRate / 4).toFixed(2);
-  // const monthlypremiumRate = (premiumRate / 12).toFixed(2);
-
-  // function handlePlanChange(event) {
-  //   setSelectedAge(parseInt(event.target.value));
-  // }
-  // // handle plan selection change
-  // function handlePlanChange(event) {
-  //   setSelectedPlan(event.target.value);
-  // }
-
-  // // handle paying term selection change
-  // function handlePayingTermChange(event) {
-  //   setPayingTerm(parseInt(event.target.value));
-  // }
-
-  // // handle policy term selection change
-  // // function handlePolicyTermChange(event) {
-  // //   setPolicyTerm(parseInt(event.target.value));
-  // // }
   // //ENDS//
 
   function fetchpremiumRate() {
@@ -110,9 +79,6 @@ export default function Tabs() {
     setpremiumRate(rate);
     setShowTable(true);
   }
-  // const yearValue = (value * parseFloat(premiumRate) / 100).toFixed(2);
-  // const yearValue = Sum ? (Sum * parseFloat(premiumRate) / 100).toFixed(2) : 0;
-  // printing input values
   const [Firstname, setFirstname] = useState('');
   const [Lastname, setLastname] = useState('');
   const [Middlename, setMiddlename] = useState('');
@@ -175,18 +141,18 @@ export default function Tabs() {
    const halfyearpremium = (Yearlypremium * 10)/100;
    const halfyearpremium1 =(halfyearpremium + Yearlypremium);
    const halfyearpremium2 = (halfyearpremium1)/2;
-   const halfyearpremium3 = halfyearpremium2.toFixed(2);
+   const halfyearpremium4 = halfyearpremium2.toFixed(2);
 
    const quarterlypremium = (Yearlypremium * 12)/100;
    const quarterlypremium1 = (quarterlypremium + Yearlypremium);
    const quarterlypremium2 = (quarterlypremium1)/4;
-   const quarterlypremium3 = quarterlypremium2.toFixed(2);
+   const quarterlypremium4 = quarterlypremium2.toFixed(2);
 
 
    const monthlypremium = (Yearlypremium * 15)/100;
    const monthlypremium1 = (monthlypremium + Yearlypremium);
    const monthlypremium2 = (monthlypremium1)/12;
-   const monthlypremium3 = monthlypremium2.toFixed(2);
+   const monthlypremium4 = monthlypremium2.toFixed(2);
 
 
   // premium calculations
@@ -234,21 +200,21 @@ export default function Tabs() {
     const total1 = total.toFixed(2);
     setTotalValue(total1);
 
-    const premiumRateNum1 = parseFloat(halfyearpremium3);
+    const premiumRateNum1 = parseFloat(halfyearpremium4);
     const valueNum1 = parseFloat(halfYearly);
     const taxNum1 = parseFloat(halfYearlytax);
     const total2 = premiumRateNum1 + valueNum1 + taxNum1;
     const total3 = total2.toFixed(2);
     setTotalValuehalf(total3);
 
-    const premiumRateNum2 = parseFloat(quarterlypremium3);
+    const premiumRateNum2 = parseFloat(quarterlypremium4);
     const valueNum2 = parseFloat(quarterly);
     const taxNum2 = parseFloat(quarterlyYearlytax);
     const total4 = premiumRateNum2 + valueNum2 + taxNum2;
     const total5 = total4.toFixed(2);
     setTotalValuequater(total5);
 
-    const premiumRateNum3 = parseFloat(monthlypremium3);
+    const premiumRateNum3 = parseFloat(monthlypremium4);
     const valueNum3 = parseFloat(monthly);
     const taxNum3 = parseFloat(monthlytax);
     const total6= premiumRateNum3 + valueNum3 + taxNum3;
