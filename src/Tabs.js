@@ -234,21 +234,21 @@ export default function Tabs() {
     const total1 = total.toFixed(2);
     setTotalValue(total1);
 
-    const premiumRateNum1 = parseFloat(halfyearpremium);
+    const premiumRateNum1 = parseFloat(halfyearpremium3);
     const valueNum1 = parseFloat(halfYearly);
     const taxNum1 = parseFloat(halfYearlytax);
     const total2 = premiumRateNum1 + valueNum1 + taxNum1;
     const total3 = total2.toFixed(2);
     setTotalValuehalf(total3);
 
-    const premiumRateNum2 = parseFloat(quarterlypremium);
+    const premiumRateNum2 = parseFloat(quarterlypremium3);
     const valueNum2 = parseFloat(quarterly);
     const taxNum2 = parseFloat(quarterlyYearlytax);
     const total4 = premiumRateNum2 + valueNum2 + taxNum2;
     const total5 = total4.toFixed(2);
     setTotalValuequater(total5);
 
-    const premiumRateNum3 = parseFloat(monthlypremium);
+    const premiumRateNum3 = parseFloat(monthlypremium3);
     const valueNum3 = parseFloat(monthly);
     const taxNum3 = parseFloat(monthlytax);
     const total6= premiumRateNum3 + valueNum3 + taxNum3;
